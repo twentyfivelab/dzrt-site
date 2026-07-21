@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
   if (!process.env.RESEND_API_KEY) {
     console.warn(
-      "[api/contact] RESEND_API_KEY manquante — e-mail non envoyé. Configurez la clé avant la mise en production.",
+      "[api/contact] RESEND_API_KEY manquante, e-mail non envoyé. Configurez la clé avant la mise en production.",
     );
     return NextResponse.json({ ok: true, delivered: false });
   }
@@ -33,13 +33,13 @@ export async function POST(request: Request) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: `DZRT. <contact@dzrt.com>`,
+      from: `DZRT. <${CONTACT_EMAIL}>`,
       to: CONTACT_EMAIL,
       replyTo: parsed.data.email,
-      subject: `Nouveau message de contact — ${parsed.data.nom}`,
+      subject: `Nouveau message de contact de ${parsed.data.nom}`,
       text: [
         `Nom : ${parsed.data.nom}`,
-        `Téléphone : ${parsed.data.telephone || "—"}`,
+        `Téléphone : ${parsed.data.telephone || "Non renseigné"}`,
         `Email : ${parsed.data.email}`,
         "",
         parsed.data.message,

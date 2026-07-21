@@ -13,7 +13,7 @@ export const faqEntries: FaqEntry[] = [
     id: "pourquoi-tarifs-varient",
     question: "Pourquoi les tarifs varient-ils autant d'un projet à l'autre ?",
     reponse:
-      "Un site one page pour un lancement rapide et une boutique e-commerce avec des centaines de références n'ont ni la même complexité technique, ni le même temps de conception. Nous préférons un tarif ajusté à votre besoin réel plutôt qu'une offre standardisée qui vous ferait payer des fonctionnalités inutiles ou, à l'inverse, manquer d'éléments essentiels.",
+      "Un site one page pour un lancement rapide et une boutique en ligne avec des centaines de produits n'ont pas la même complexité ni le même temps de conception. Nous préférons un tarif ajusté à votre besoin réel plutôt qu'une offre standard qui vous ferait payer pour rien, ou au contraire manquer l'essentiel.",
     category: "tarifs",
   },
   {
@@ -35,7 +35,7 @@ export const faqEntries: FaqEntry[] = [
     id: "que-fournir",
     question: "Que dois-je préparer de mon côté avant le démarrage ?",
     reponse:
-      "Dans l'idéal : vos textes (ou vos idées, nous pouvons les rédiger avec vous), vos photos ou visuels existants, votre logo si vous en avez déjà un, et une idée claire de vos objectifs. Si vous n'avez rien de tout cela, ce n'est pas un problème : notre accompagnement inclut la rédaction et, si besoin, la création de votre identité visuelle.",
+      "Idéalement, vos textes (ou simplement vos idées, nous pouvons les rédiger avec vous), vos photos, votre logo si vous en avez déjà un, et une idée claire de vos objectifs. Si vous n'avez rien de tout cela, ce n'est pas un problème. Notre accompagnement inclut la rédaction et, si besoin, la création de votre identité visuelle.",
     category: "process",
   },
   {
@@ -64,7 +64,7 @@ export const faqEntries: FaqEntry[] = [
     id: "site-rapide-securise",
     question: "Mon site sera-t-il rapide et sécurisé ?",
     reponse:
-      "Chaque site est développé avec des technologies modernes (Next.js, React) reconnues pour leurs performances, optimisé pour les Core Web Vitals de Google, et hébergé sur une infrastructure fiable avec certificat de sécurité HTTPS inclus. La rapidité de chargement fait partie intégrante de notre méthode, pas d'une option.",
+      "Chaque site est développé avec des technologies modernes (Next.js, React), optimisé pour les Core Web Vitals de Google et hébergé sur une infrastructure fiable, avec un certificat de sécurité HTTPS inclus. La rapidité de chargement fait partie de notre méthode, pas une option.",
     category: "technique",
     featured: true,
   },

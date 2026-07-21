@@ -6,11 +6,11 @@ import { SocialProofTeaser } from "@/components/sections/home/SocialProofTeaser"
 import { FaqTeaser } from "@/components/sections/home/FaqTeaser";
 import { FinalCta } from "@/components/sections/home/FinalCta";
 import { buildMetadata } from "@/lib/metadata";
+import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
-  title: "DZRT. — Studio digital : sites internet, branding & visibilité",
-  description:
-    "DZRT. conçoit des sites internet, des identités de marque et des stratégies de visibilité en ligne pour les entreprises qui veulent inspirer confiance dès le premier regard.",
+  title: `${SITE_NAME} · Studio digital : sites internet et branding`,
+  description: SITE_DESCRIPTION,
   path: "/",
 });
 

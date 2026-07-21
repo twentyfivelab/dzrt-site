@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/Button";
 import { SuccessBadge } from "@/components/ui/illustrations/SuccessBadge";
 import { contactSchema, type ContactFormValues } from "@/components/forms/formSchemas";
+import { CONTACT_EMAIL } from "@/lib/constants";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
@@ -88,7 +89,7 @@ export function ContactForm() {
       {status === "error" && (
         <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">
           Une erreur est survenue lors de l&apos;envoi. Merci de réessayer ou de nous
-          écrire directement à contact@dzrt.com.
+          écrire directement à {CONTACT_EMAIL}.
         </p>
       )}
 

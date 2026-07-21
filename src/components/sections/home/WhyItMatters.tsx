@@ -26,19 +26,19 @@ const reasons = [
     icon: MapPin,
     title: "Google Business Profile, votre vitrine locale",
     description:
-      "Avis, horaires, itinéraire, photos : une fiche optimisée capte les recherches locales au moment exact où vos clients décident de passer à l'action.",
+      "Une fiche bien tenue montre vos avis, vos horaires et vos photos au moment où un client décide de passer à l'action.",
   },
   {
     icon: BrainCircuit,
     title: "L'intelligence artificielle, un avantage concret",
     description:
-      "Réponses automatiques, contenus optimisés, recommandations personnalisées : l'IA bien intégrée fait gagner du temps et améliore l'expérience de vos visiteurs.",
+      "Bien utilisée, l'IA répond plus vite à vos clients, améliore vos contenus et vous fait gagner un temps précieux au quotidien.",
   },
   {
     icon: Workflow,
     title: "Automatiser pour se concentrer sur l'essentiel",
     description:
-      "Prises de rendez-vous, relances, reporting : automatiser les tâches répétitives libère du temps pour vous concentrer sur votre cœur de métier.",
+      "Automatiser les tâches répétitives, comme les rendez-vous ou les relances, vous libère du temps pour vous concentrer sur votre métier.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function WhyItMatters() {
         <SectionHeading
           eyebrow="Pourquoi investir maintenant"
           title="Ce qui fait la différence entre être en ligne et être visible"
-          description="Six leviers concrets sur lesquels nous travaillons pour transformer votre présence en ligne en véritable moteur de croissance."
+          description="Six leviers concrets pour transformer votre présence en ligne en moteur de croissance."
           align="center"
           className="mx-auto"
         />

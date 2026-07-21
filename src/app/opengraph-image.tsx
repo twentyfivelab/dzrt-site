@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { SITE_TAGLINE } from "@/lib/constants";
 
-export const alt = "DZRT. — Studio digital";
+export const alt = "DZRT., studio digital";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

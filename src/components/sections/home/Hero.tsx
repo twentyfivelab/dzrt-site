@@ -22,16 +22,15 @@ export function Hero() {
           <Reveal className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-ink-900/10 bg-white/70 px-4 py-1.5 text-sm font-medium text-ink-700 backdrop-blur-sm dark:border-white/12 dark:bg-white/6 dark:text-ink-100">
               <Sparkles className="h-4 w-4 text-rose-500 dark:text-rose-400" aria-hidden="true" />
-              Studio digital — sites internet &amp; identités de marque
+              Studio digital : sites internet et identités de marque
             </span>
             <h1 className="font-display text-4xl leading-[1.05] font-semibold tracking-tight text-balance text-ink-900 sm:text-6xl dark:text-ink-50">
               Votre image mérite <span className="text-gradient">mieux</span>{" "}
               qu&apos;un site internet ordinaire.
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-500 sm:text-xl lg:mx-0 dark:text-ink-300">
-              DZRT. conçoit des sites, des identités de marque et des stratégies de
-              visibilité qui donnent envie de vous faire confiance — et de passer à
-              l&apos;action.
+              DZRT. conçoit des sites, des identités de marque et des stratégies
+              de visibilité qui donnent vraiment envie de passer à l&apos;action.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
               <MagneticButton>

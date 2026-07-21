@@ -23,6 +23,18 @@ export interface PortfolioResult {
   value: string;
 }
 
+export interface PortfolioTrend {
+  label: string;
+  points: number[];
+}
+
+export interface PortfolioTestimonial {
+  auteur: string;
+  role: string;
+  citation: string;
+  note: number;
+}
+
 export interface PortfolioProject {
   slug: string;
   nom: string;
@@ -32,18 +44,10 @@ export interface PortfolioProject {
   solution: string;
   technologies: string[];
   resultats: PortfolioResult[];
+  trend: PortfolioTrend;
+  temoignage: PortfolioTestimonial;
   accent: "rose" | "peach" | "lilac" | "lavender" | "apricot";
   year: number;
-}
-
-export interface Testimonial {
-  id: string;
-  nom: string;
-  role: string;
-  secteur: string;
-  entreprise: string;
-  citation: string;
-  note: number;
 }
 
 export type FaqCategory =

@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { BrandMoodboard } from "@/components/ui/illustrations/BrandMoodboard";
 
 const deliverables = [
   "Un logo minimaliste et mémorable, décliné pour tous vos supports",
@@ -9,14 +10,6 @@ const deliverables = [
   "Des typographies premium, cohérentes entre le web et vos supports imprimés",
   "Un univers graphique complet : icônes, boutons, cartes, illustrations",
   "Une expérience utilisateur alignée du premier au dernier pixel avec votre identité",
-];
-
-const swatches = [
-  "bg-rose-300",
-  "bg-peach-300",
-  "bg-apricot-300",
-  "bg-lilac-300",
-  "bg-lavender-300",
 ];
 
 export function BrandingSection() {
@@ -34,8 +27,8 @@ export function BrandingSection() {
             Nous ne posons jamais un gabarit générique sur votre site. Logo,
             palette, typographies et univers graphique sont conçus sur mesure
             pour votre marque, puis appliqués avec la même rigueur à chaque
-            page, chaque bouton, chaque carte — pour une cohérence parfaite du
-            premier au dernier clic.
+            page, chaque bouton et chaque carte, pour une cohérence parfaite
+            du premier au dernier clic.
           </p>
           <ul className="mt-8 space-y-3">
             {deliverables.map((item) => (
@@ -57,45 +50,17 @@ export function BrandingSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="rounded-[2rem] border border-ink-900/5 bg-white/80 p-8 shadow-glow-md backdrop-blur-sm sm:p-10 dark:border-white/8 dark:bg-white/4">
-            <p className="text-xs font-semibold tracking-wider text-ink-500 uppercase dark:text-ink-300">
-              Palette
+          <div className="rounded-[2rem] border border-ink-900/5 bg-white/80 py-8 shadow-glow-md backdrop-blur-sm dark:border-white/8 dark:bg-white/4">
+            <p className="px-8 text-xs font-semibold tracking-wider text-ink-500 uppercase sm:px-10 dark:text-ink-300">
+              Notre terrain de jeu créatif
             </p>
-            <div className="mt-4 flex gap-3">
-              {swatches.map((swatch) => (
-                <span
-                  key={swatch}
-                  className={`h-10 w-10 rounded-full ${swatch} ring-1 ring-ink-900/5 dark:ring-white/10`}
-                  aria-hidden="true"
-                />
-              ))}
+            <div className="mt-6">
+              <BrandMoodboard />
             </div>
-
-            <p className="mt-10 text-xs font-semibold tracking-wider text-ink-500 uppercase dark:text-ink-300">
-              Typographies
-            </p>
-            <div className="mt-4 space-y-4">
-              <div>
-                <p className="font-display text-4xl font-semibold text-ink-900 dark:text-ink-50">
-                  Aa
-                </p>
-                <p className="mt-1 text-sm text-ink-500 dark:text-ink-300">
-                  Titres — Bricolage Grotesque
-                </p>
-              </div>
-              <div>
-                <p className="font-sans text-4xl font-semibold text-ink-900 dark:text-ink-50">
-                  Aa
-                </p>
-                <p className="mt-1 text-sm text-ink-500 dark:text-ink-300">Texte courant — Inter</p>
-              </div>
-            </div>
-
-            <p className="mt-10 text-xs font-semibold tracking-wider text-ink-500 uppercase dark:text-ink-300">
-              Wordmark
-            </p>
-            <p className="mt-4 font-display text-3xl font-semibold text-ink-900 dark:text-ink-50">
-              DZRT<span className="text-rose-500 dark:text-rose-400">.</span>
+            <p className="mt-6 px-8 text-sm leading-relaxed text-ink-500 sm:px-10 dark:text-ink-300">
+              Un aperçu de ce que nous savons créer, bien avant de parler de
+              votre projet. Aucun style prédéfini : chaque identité que nous
+              livrons est unique.
             </p>
           </div>
         </Reveal>

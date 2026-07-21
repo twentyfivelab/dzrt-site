@@ -17,7 +17,7 @@ import {
   budgetOptions,
   type DevisFormValues,
 } from "@/components/forms/formSchemas";
-import { DEVIS_RESPONSE_DELAY } from "@/lib/constants";
+import { CONTACT_EMAIL, DEVIS_RESPONSE_DELAY } from "@/lib/constants";
 
 export function DevisForm() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
@@ -137,7 +137,7 @@ export function DevisForm() {
       {status === "error" && (
         <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">
           Une erreur est survenue lors de l&apos;envoi. Merci de réessayer ou de nous
-          écrire directement à contact@dzrt.com.
+          écrire directement à {CONTACT_EMAIL}.
         </p>
       )}
 

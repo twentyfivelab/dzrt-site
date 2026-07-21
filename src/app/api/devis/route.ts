@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
   if (!process.env.RESEND_API_KEY) {
     console.warn(
-      "[api/devis] RESEND_API_KEY manquante — e-mail non envoyé. Configurez la clé avant la mise en production.",
+      "[api/devis] RESEND_API_KEY manquante, e-mail non envoyé. Configurez la clé avant la mise en production.",
     );
     return NextResponse.json({ ok: true, delivered: false });
   }
@@ -33,14 +33,14 @@ export async function POST(request: Request) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: `DZRT. <devis@dzrt.com>`,
+      from: `DZRT. <${CONTACT_EMAIL}>`,
       to: CONTACT_EMAIL,
       replyTo: parsed.data.email,
-      subject: `Nouvelle demande de devis — ${parsed.data.nom}`,
+      subject: `Nouvelle demande de devis de ${parsed.data.nom}`,
       text: [
         `Nom : ${parsed.data.nom}`,
-        `Entreprise : ${parsed.data.entreprise || "—"}`,
-        `Téléphone : ${parsed.data.telephone || "—"}`,
+        `Entreprise : ${parsed.data.entreprise || "Non renseigné"}`,
+        `Téléphone : ${parsed.data.telephone || "Non renseigné"}`,
         `Email : ${parsed.data.email}`,
         `Projet : ${parsed.data.projet}`,
         `Budget : ${parsed.data.budget}`,

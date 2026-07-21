@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Réalisations",
   description:
-    "Découvrez une sélection de projets menés par DZRT. : sites vitrines, e-commerce et one page, avec leurs résultats concrets en visibilité, conversion et chiffre d'affaires.",
+    "Sites vitrines, e-commerce et one page : découvrez nos projets, leurs résultats chiffrés en visibilité, conversion et chiffre d'affaires, et les témoignages de nos clients.",
   path: "/realisations",
 });
 
@@ -19,8 +19,8 @@ export default function RealisationsPage() {
       <Breadcrumbs items={[{ label: "Réalisations", href: "/realisations" }]} />
       <PageHero
         eyebrow="Réalisations"
-        title="Des projets pensés pour produire des résultats mesurables"
-        description="Chaque projet répond à un objectif business précis. Voici quelques exemples de collaborations et les résultats obtenus."
+        title="Des projets pensés pour des résultats mesurables"
+        description="Chaque projet répond à un objectif précis. Voici quelques collaborations, leurs résultats chiffrés et l'avis des clients qui les ont vécues."
       />
       <section className="pb-24 sm:pb-32">
         <Container>

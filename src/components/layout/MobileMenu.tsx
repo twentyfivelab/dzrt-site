@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,17 +8,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/data/nav";
 import { Button } from "@/components/ui/Button";
+import { useMounted } from "@/lib/hooks/useMounted";
 import { cn } from "@/lib/utils";
-
-const emptySubscribe = () => () => {};
-
-function useMounted() {
-  return useSyncExternalStore(
-    emptySubscribe,
-    () => true,
-    () => false,
-  );
-}
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);

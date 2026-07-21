@@ -54,7 +54,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="FAQ"
         title="Toutes les réponses avant de vous lancer"
-        description="Tarifs, délais, déroulement d'un projet, aspects techniques ou suivi après livraison : nous répondons aux questions les plus fréquentes en toute transparence."
+        description="Des questions sur nos tarifs, nos délais ou notre façon de travailler ? Nous répondons ici aux questions les plus fréquentes, en toute transparence."
       />
       <section className="pb-24 sm:pb-32">
         <Container className="max-w-4xl space-y-14">
@@ -76,7 +76,7 @@ export default function FaqPage() {
       </section>
       <CtaBanner
         title="Une question qui ne trouve pas de réponse ici ?"
-        description="Écrivez-nous directement : nous vous répondons sous 24 à 48h, sans jargon technique."
+        description="Écrivez-nous directement, nous vous répondons sous 24 à 48h, sans jargon technique."
       />
     </>
   );

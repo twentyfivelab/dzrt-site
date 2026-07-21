@@ -96,7 +96,7 @@ export default function ContactPage() {
             <div
               className="relative flex h-56 items-center justify-center overflow-hidden rounded-[2rem] border border-ink-900/5 bg-[image:var(--grad-hero)] dark:border-white/8"
               role="img"
-              aria-label={`Localisation illustrative — ${REGISTERED_ADDRESS}`}
+              aria-label={`Localisation illustrative de l'adresse : ${REGISTERED_ADDRESS}`}
             >
               <div
                 className="absolute inset-0 opacity-40"

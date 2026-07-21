@@ -15,7 +15,7 @@ export function buildMetadata({
   noIndex = false,
 }: BuildMetadataOptions): Metadata {
   const url = new URL(path, SITE_URL).toString();
-  const socialTitle = title.includes(SITE_NAME) ? title : `${title} — ${SITE_NAME}`;
+  const socialTitle = title.includes(SITE_NAME) ? title : `${title} · ${SITE_NAME}`;
 
   return {
     title,

@@ -1,5 +1,7 @@
+import { Star } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { MiniTrendChart } from "@/components/ui/illustrations/MiniTrendChart";
 import type { PortfolioProject } from "@/lib/types";
 
 const accentGradients: Record<PortfolioProject["accent"], string> = {
@@ -77,6 +79,36 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
             </div>
           ))}
         </dl>
+
+        <MiniTrendChart project={project} className="mt-5" />
+
+        <div className="mt-6 border-t border-ink-900/5 pt-6 dark:border-white/8">
+          <div
+            className="flex items-center gap-1"
+            aria-label={`Note du témoignage : ${project.temoignage.note} sur 5`}
+          >
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                key={i}
+                className={
+                  i < project.temoignage.note
+                    ? "h-3.5 w-3.5 fill-peach-400 text-peach-400"
+                    : "h-3.5 w-3.5 text-ink-300 dark:text-white/15"
+                }
+                aria-hidden="true"
+              />
+            ))}
+          </div>
+          <p className="mt-3 text-sm leading-relaxed text-ink-700 dark:text-ink-100">
+            &laquo;&nbsp;{project.temoignage.citation}&nbsp;&raquo;
+          </p>
+          <p className="mt-3 text-sm font-semibold text-ink-900 dark:text-ink-50">
+            {project.temoignage.auteur}
+            <span className="ml-1.5 font-normal text-ink-500 dark:text-ink-300">
+              {project.temoignage.role}
+            </span>
+          </p>
+        </div>
       </div>
     </Card>
   );

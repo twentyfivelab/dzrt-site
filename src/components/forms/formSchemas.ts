@@ -3,7 +3,9 @@ import { z } from "zod";
 export const projetOptions = [
   { value: "site-one-page", label: "Site One Page" },
   { value: "site-vitrine", label: "Site Vitrine" },
+  { value: "site-premium", label: "Site Premium" },
   { value: "site-e-commerce", label: "Site E-commerce" },
+  { value: "refonte", label: "Refonte de site" },
   { value: "branding", label: "Branding / identité visuelle" },
   { value: "autre", label: "Autre projet" },
 ] as const;

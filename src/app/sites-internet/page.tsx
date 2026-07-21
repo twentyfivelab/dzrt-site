@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/shared/PageHero";
 import { Breadcrumbs } from "@/components/sections/shared/Breadcrumbs";
-import { ServiceDetailCard } from "@/components/sections/prestations/ServiceDetailCard";
-import { BrandingSection } from "@/components/sections/prestations/BrandingSection";
+import { ServiceDetailCard } from "@/components/sections/sites-internet/ServiceDetailCard";
+import { BrandingSection } from "@/components/sections/sites-internet/BrandingSection";
 import { CtaBanner } from "@/components/sections/shared/CtaBanner";
 import { Container } from "@/components/ui/Container";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -11,10 +11,10 @@ import { buildMetadata } from "@/lib/metadata";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Nos Prestations",
+  title: "Sites Internet",
   description:
-    "Site One Page, Site Vitrine, Site E-commerce, Suivi & Optimisation et Branding : découvrez nos prestations, pour qui elles sont faites, leurs délais et leurs tarifs indicatifs.",
-  path: "/prestations",
+    "Site One Page, Vitrine, Premium, E-commerce, refonte, maintenance et branding : toutes nos prestations de création de site internet, avec délais et tarifs indicatifs.",
+  path: "/sites-internet",
 });
 
 const detailServices = services.filter((service) => service.slug !== "branding");
@@ -33,17 +33,17 @@ const servicesJsonLd = services.map((service) => ({
   },
 }));
 
-export default function PrestationsPage() {
+export default function SitesInternetPage() {
   return (
     <>
       {servicesJsonLd.map((entry) => (
         <JsonLd key={entry.name} data={entry} />
       ))}
-      <Breadcrumbs items={[{ label: "Prestations", href: "/prestations" }]} />
+      <Breadcrumbs items={[{ label: "Sites Internet", href: "/sites-internet" }]} />
       <PageHero
-        eyebrow="Nos prestations"
-        title="Des solutions claires, pour chaque étape de votre croissance"
-        description="Que vous démarriez votre activité ou que vous vouliez structurer votre présence en ligne, chaque prestation est pensée pour un objectif précis — sans complexité inutile."
+        eyebrow="Sites internet"
+        title="Un site adapté à chaque étape de votre croissance"
+        description="Que vous démarriez votre activité ou vouliez faire évoluer votre présence en ligne, chaque prestation répond à un objectif précis, du premier site à la refonte."
       />
       <section className="pb-24 sm:pb-32">
         <Container className="space-y-8">
@@ -54,8 +54,8 @@ export default function PrestationsPage() {
       </section>
       <BrandingSection />
       <CtaBanner
-        title="Une question sur la prestation la plus adaptée à votre projet ?"
-        description="Décrivez-nous votre activité et vos objectifs : nous vous recommandons la formule la plus pertinente, sans survente."
+        title="Une question sur la formule la plus adaptée à votre projet ?"
+        description="Décrivez-nous votre activité et vos objectifs. Nous vous recommandons la formule la plus pertinente, sans survente."
       />
     </>
   );
