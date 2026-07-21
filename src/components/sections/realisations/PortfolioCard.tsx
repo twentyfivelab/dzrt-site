@@ -35,27 +35,27 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
           <Badge tone={accentTone[project.accent]}>{project.secteur}</Badge>
           <span className="text-sm text-ink-500 dark:text-ink-300">{project.year}</span>
         </div>
+
+        <div className="mt-4">
+          <p className="text-xs font-semibold tracking-wide text-lilac-600 uppercase dark:text-lilac-300">
+            Notre solution
+          </p>
+          <p className="mt-1.5 text-base leading-relaxed text-ink-700 dark:text-ink-100">
+            {project.solution}
+          </p>
+        </div>
+
         <p className="mt-4 text-base leading-relaxed text-ink-500 dark:text-ink-300">
           {project.description}
         </p>
 
-        <div className="mt-5 grid grid-cols-1 gap-4 rounded-2xl bg-ink-900/[0.03] p-4 sm:grid-cols-2 dark:bg-white/4">
-          <div>
-            <p className="text-xs font-semibold tracking-wide text-ink-500 uppercase dark:text-ink-300">
-              Le défi
-            </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-ink-700 dark:text-ink-100">
-              {project.probleme}
-            </p>
-          </div>
-          <div>
-            <p className="text-xs font-semibold tracking-wide text-ink-500 uppercase dark:text-ink-300">
-              Notre solution
-            </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-ink-700 dark:text-ink-100">
-              {project.solution}
-            </p>
-          </div>
+        <div className="mt-5 rounded-2xl bg-ink-900/[0.03] p-4 dark:bg-white/4">
+          <p className="text-xs font-semibold tracking-wide text-ink-500 uppercase dark:text-ink-300">
+            Le défi
+          </p>
+          <p className="mt-1.5 text-sm leading-relaxed text-ink-700 dark:text-ink-100">
+            {project.probleme}
+          </p>
         </div>
 
         <div className="mt-5 flex flex-wrap gap-2">

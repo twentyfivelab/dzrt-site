@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/lib/data/nav";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { cn } from "@/lib/utils";
 
 export function Nav({ className }: { className?: string }) {
@@ -34,6 +35,7 @@ export function Nav({ className }: { className?: string }) {
           </Link>
         );
       })}
+      <WhatsAppButton className="ml-1" />
     </nav>
   );
 }

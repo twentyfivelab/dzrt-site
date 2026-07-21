@@ -10,7 +10,7 @@ export const portfolioProjects: PortfolioProject[] = [
     probleme:
       "Le studio envoyait son book par e-mail, n'apparaissait pas sur Google et son site ne reflétait pas la qualité de son travail.",
     solution:
-      "Un site vitrine sur mesure avec un portfolio immersif par projet, une identité de marque complète et un référencement local optimisé.",
+      "Un site vitrine haut de gamme avec un portfolio immersif, pensé pour mettre en valeur les réalisations du studio, renforcer sa crédibilité et générer davantage de demandes de devis, avec un référencement optimisé.",
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "SEO local"],
     resultats: [
       { label: "Trafic organique", value: "+140 % en 4 mois" },
@@ -26,7 +26,7 @@ export const portfolioProjects: PortfolioProject[] = [
       note: 5,
     },
     accent: "lilac",
-    year: 2025,
+    year: 2026,
   },
   {
     slug: "chez-marcelline",

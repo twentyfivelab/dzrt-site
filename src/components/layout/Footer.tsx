@@ -87,6 +87,9 @@ export function Footer() {
 
         <div className="mt-12 border-t border-ink-900/5 pt-8 text-sm text-ink-400 dark:border-white/8 dark:text-ink-400">
           © {new Date().getFullYear()} DZRT. Tous droits réservés.
+          <span className="mt-1 block text-xs text-ink-400/80 dark:text-ink-400/70">
+            Nous accompagnons les entreprises en France et en Suisse.
+          </span>
         </div>
       </Container>
     </footer>

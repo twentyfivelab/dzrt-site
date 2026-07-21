@@ -11,11 +11,11 @@ export function WhatsAppButton({ className }: { className?: string }) {
       aria-label="Nous contacter sur WhatsApp"
       title="Nous contacter sur WhatsApp"
       className={cn(
-        "group flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-ink-700 transition-colors hover:bg-ink-900/5 dark:text-ink-100 dark:hover:bg-white/8",
+        "group flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-colors hover:bg-ink-900/5 dark:hover:bg-white/8",
         className,
       )}
     >
-      <WhatsAppIcon className="h-5 w-5 transition-transform duration-300 ease-out group-hover:scale-110" />
+      <WhatsAppIcon className="h-6 w-6 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(247,126,156,0.5)]" />
     </a>
   );
 }
