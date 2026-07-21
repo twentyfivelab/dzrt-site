@@ -18,7 +18,7 @@ export function ServicesOverview() {
       <Container>
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
-            eyebrow="Sites internet"
+            eyebrow="Nos offres"
             title="Un accompagnement complet, du premier pixel à la croissance durable"
             description="Chaque projet est différent. Voici comment nous construisons la solution la plus adaptée à votre activité."
           />

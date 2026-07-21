@@ -1,149 +1,77 @@
-import { useId } from "react";
-import { cn } from "@/lib/utils";
-
-const TILE = "h-48 w-40 shrink-0 overflow-hidden rounded-2xl shadow-card";
-
-function PaletteWarmTile() {
-  const colors = ["#c1502e", "#d9a441", "#e8c8a0", "#4a2e21"];
-  return (
-    <div className={cn(TILE, "flex flex-col")}>
-      {colors.map((color) => (
-        <span key={color} className="flex-1" style={{ backgroundColor: color }} />
-      ))}
-    </div>
-  );
-}
-
-function PaletteCoolTile() {
-  const colors = ["#14141a", "#1b2a4a", "#1f6f54", "#cfd3d8"];
-  return (
-    <div className={cn(TILE, "flex flex-col")}>
-      {colors.map((color) => (
-        <span key={color} className="flex-1" style={{ backgroundColor: color }} />
-      ))}
-    </div>
-  );
-}
-
-function TypographyEditorialTile() {
-  return (
-    <div className={cn(TILE, "flex flex-col items-center justify-center gap-2 bg-[#f5f1ea] px-4")}>
-      <p className="font-sans text-5xl font-light tracking-wide text-[#2b2620] italic">aa</p>
-      <p className="text-[0.65rem] tracking-[0.2em] text-[#8a8071] uppercase">Éditorial</p>
-    </div>
-  );
-}
-
-function TypographyBoldTile() {
-  return (
-    <div className={cn(TILE, "flex flex-col items-center justify-center gap-2 bg-[#14141a] px-4")}>
-      <p className="font-display text-5xl font-black tracking-tighter text-white uppercase">AA</p>
-      <p className="text-[0.65rem] tracking-[0.2em] text-white/50 uppercase">Affirmé</p>
-    </div>
-  );
-}
-
-function LogomarkOrbitTile() {
-  const uid = useId();
-  return (
-    <div className={cn(TILE, "flex items-center justify-center bg-[#efe6ff]")}>
-      <svg viewBox="0 0 80 80" className="h-20 w-20" aria-hidden="true">
-        <defs>
-          <linearGradient id={`${uid}-lm1`} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#6a47b3" />
-            <stop offset="100%" stopColor="#8a63d9" />
-          </linearGradient>
-        </defs>
-        <circle cx="40" cy="40" r="34" fill="none" stroke={`url(#${uid}-lm1)`} strokeWidth="3" />
-        <circle cx="40" cy="12" r="7" fill={`url(#${uid}-lm1)`} />
-      </svg>
-    </div>
-  );
-}
-
-function LogomarkGeometricTile() {
-  return (
-    <div className={cn(TILE, "flex items-center justify-center bg-[#f0ede6]")}>
-      <svg viewBox="0 0 80 80" className="h-20 w-20" aria-hidden="true">
-        <polygon points="40,8 72,64 8,64" fill="none" stroke="#211a24" strokeWidth="3" strokeLinejoin="round" />
-        <circle cx="40" cy="46" r="10" fill="#211a24" />
-      </svg>
-    </div>
-  );
-}
-
-function BusinessCardTile() {
-  return (
-    <div className={cn(TILE, "flex items-center justify-center bg-[#e9e4da] p-5")}>
-      <div className="w-full -rotate-3 rounded-lg bg-white p-4 shadow-lg">
-        <span className="block h-6 w-6 rounded-full bg-gradient-to-br from-rose-400 to-lilac-400" />
-        <span className="mt-3 block h-2 w-3/4 rounded-full bg-[#211a24]/70" />
-        <span className="mt-1.5 block h-1.5 w-1/2 rounded-full bg-[#211a24]/30" />
-      </div>
-    </div>
-  );
-}
-
-function InterfaceTile() {
-  return (
-    <div className={cn(TILE, "flex flex-col bg-[#101820] p-3")}>
-      <div className="flex gap-1">
-        <span className="h-1.5 w-1.5 rounded-full bg-white/25" />
-        <span className="h-1.5 w-1.5 rounded-full bg-white/25" />
-        <span className="h-1.5 w-1.5 rounded-full bg-white/25" />
-      </div>
-      <span className="mt-3 block h-14 w-full rounded-md bg-gradient-to-br from-emerald-400/70 to-cyan-500/60" />
-      <span className="mt-3 block h-2 w-3/4 rounded-full bg-white/30" />
-      <span className="mt-1.5 block h-2 w-1/2 rounded-full bg-white/15" />
-      <span className="mt-auto block h-7 w-2/3 rounded-full bg-emerald-400/80" />
-    </div>
-  );
-}
-
-function PackagingTile() {
-  return (
-    <div className={cn(TILE, "flex items-center justify-center bg-[#e4e8de] p-6")}>
-      <div className="relative flex h-full w-full items-center justify-center rounded-md bg-[#3c5240]">
-        <span className="absolute inset-x-4 top-0 h-px bg-[#e4e8de]/30" />
-        <span className="h-14 w-10 rounded-sm bg-[#e8dfc8]" />
-      </div>
-    </div>
-  );
-}
-
-const tiles = [
-  PaletteWarmTile,
-  TypographyEditorialTile,
-  LogomarkOrbitTile,
-  BusinessCardTile,
-  PaletteCoolTile,
-  InterfaceTile,
-  LogomarkGeometricTile,
-  PackagingTile,
-  TypographyBoldTile,
-];
-
 /**
- * Auto-scrolling strip of abstract style samples, purely illustrative of
- * range (palettes, type, marks, mockups). Never DZRT's own brand tokens,
- * on purpose: the point is versatility, not another look at this site's
- * own identity. Decorative only, so it's hidden from assistive tech.
+ * Editorial moodboard: a fictional brand ("Maison Arlo") staged like a page
+ * torn from a branding studio's portfolio, deliberately distinct from DZRT's
+ * own palette and typography so it reads as "one example among countless
+ * possibilities," never as a template. Fixed dark backdrop regardless of the
+ * site's light/dark toggle, since this is meant to feel like a studio wall,
+ * not a UI surface. Purely illustrative, hence the single role="img" label.
  */
 export function BrandMoodboard({ className }: { className?: string }) {
-  const track = [...tiles, ...tiles];
-
   return (
     <div
-      className={cn(
-        "group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]",
-        className,
-      )}
-      aria-hidden="true"
+      className={className}
+      role="img"
+      aria-label="Planche d'inspiration illustrant une identité de marque fictive : mockup principal, monogramme, détail typographique et palette de couleurs, pour montrer la diversité des univers que nous créons sur mesure."
     >
-      <div className="flex w-max animate-marquee gap-4 group-hover:[animation-play-state:paused]">
-        {track.map((Tile, index) => (
-          <Tile key={index} />
-        ))}
+      <div className="relative isolate h-80 overflow-hidden sm:h-96">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(160deg, #1c1720 0%, #120f16 55%, #1a1420 100%)",
+          }}
+        />
+        <div
+          className="absolute -top-16 -left-16 h-56 w-56 rounded-full opacity-40 blur-3xl"
+          style={{ backgroundImage: "var(--grad-glow-rose)" }}
+        />
+        <div
+          className="absolute -right-12 -bottom-8 h-64 w-64 rounded-full opacity-30 blur-3xl"
+          style={{ backgroundImage: "var(--grad-glow-lilac)" }}
+        />
+
+        {/* Main mockup: a fictional artisan brand's identity poster */}
+        <div
+          className="absolute top-[9%] left-[6%] flex h-[60%] w-[58%] -rotate-2 flex-col justify-center gap-3 rounded-2xl p-5 shadow-[0_25px_55px_-18px_rgba(0,0,0,0.6)] ring-1 ring-white/10 sm:p-7"
+          style={{
+            backgroundImage: "linear-gradient(135deg, #33473d 0%, #c9a366 100%)",
+          }}
+        >
+          <span className="text-[0.55rem] font-semibold tracking-[0.3em] text-white/60 uppercase sm:text-[0.6rem]">
+            Atelier de céramique
+          </span>
+          <div>
+            <p className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              Maison Arlo
+            </p>
+            <span className="mt-2 block h-px w-10 bg-white/40" />
+          </div>
+        </div>
+
+        {/* Secondary monogram, overlapping the main card for depth */}
+        <div className="absolute right-[8%] bottom-[11%] flex h-[32%] w-[28%] rotate-3 items-center justify-center rounded-2xl bg-white/10 shadow-[0_18px_45px_-18px_rgba(0,0,0,0.55)] ring-1 ring-white/15 backdrop-blur-md">
+          <svg viewBox="0 0 48 48" className="h-8 w-8 text-white/85 sm:h-10 sm:w-10">
+            <circle cx="21" cy="24" r="13" stroke="currentColor" strokeWidth="1.4" fill="none" />
+            <circle cx="30" cy="24" r="13" stroke="currentColor" strokeWidth="1.4" fill="none" />
+          </svg>
+        </div>
+
+        {/* Premium typography detail, cropped like an editorial specimen */}
+        <div
+          className="absolute bottom-[8%] left-[3%] flex h-[26%] w-[34%] rotate-2 items-center justify-center overflow-hidden rounded-2xl shadow-[0_18px_45px_-18px_rgba(0,0,0,0.5)] ring-1 ring-white/15 backdrop-blur-sm"
+          style={{ backgroundColor: "rgba(239, 230, 216, 0.92)" }}
+        >
+          <span className="font-display text-6xl leading-none font-light text-[#2b2620] italic sm:text-7xl">
+            A
+          </span>
+        </div>
+
+        {/* Subtle, muted palette, tucked away rather than showcased */}
+        <div className="absolute top-[8%] right-[7%] flex items-center gap-1.5 rounded-full bg-black/25 px-2.5 py-1.5 ring-1 ring-white/10 backdrop-blur-sm">
+          {["#b98a86", "#7c8a72", "#c17b4f", "#2d3142"].map((hex) => (
+            <span key={hex} className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: hex }} />
+          ))}
+        </div>
       </div>
     </div>
   );

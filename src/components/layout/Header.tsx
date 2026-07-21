@@ -2,6 +2,7 @@ import { Logo } from "@/components/layout/Logo";
 import { Nav } from "@/components/layout/Nav";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
@@ -12,6 +13,7 @@ export function Header() {
         <Logo />
         <Nav className="hidden lg:flex" />
         <div className="hidden items-center gap-2 lg:flex">
+          <WhatsAppButton />
           <ThemeToggle />
           <Button href="/devis" size="sm">
             Demander un devis

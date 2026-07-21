@@ -8,6 +8,9 @@ export const CONTACT_EMAIL = "hello@dzrt.fr";
 export const CONTACT_PHONE = "[À COMPLÉTER : numéro de téléphone]";
 export const CONTACT_PHONE_DISPLAY = "[À COMPLÉTER : ex. 01 23 45 67 89]";
 
+export const WHATSAPP_NUMBER_DISPLAY = "+33 6 75 81 01 84";
+export const WHATSAPP_LINK = "https://wa.me/33675810184";
+
 export const SOCIAL_LINKS = {
   instagram: "[À COMPLÉTER : URL Instagram]",
   linkedin: "[À COMPLÉTER : URL LinkedIn]",

@@ -49,7 +49,7 @@ export const services: Service[] = [
       "Un design unique, aligné avec votre identité de marque",
     ],
     delaiIndicatif: "3 à 5 semaines",
-    tarifIndicatif: "À partir de 1 890 €, tarif indicatif, devis personnalisé",
+    tarifIndicatif: "À partir de 1 490 €, tarif indicatif, devis personnalisé",
     icon: Globe,
   },
   {
@@ -70,7 +70,7 @@ export const services: Service[] = [
       "Un accompagnement rapproché tout au long du projet",
     ],
     delaiIndicatif: "4 à 6 semaines",
-    tarifIndicatif: "À partir de 2 890 €, tarif indicatif, devis personnalisé",
+    tarifIndicatif: "À partir de 1 890 €, tarif indicatif, devis personnalisé",
     icon: Crown,
   },
   {
@@ -91,7 +91,7 @@ export const services: Service[] = [
       "Une structure prête pour le référencement produit et la publicité",
     ],
     delaiIndicatif: "5 à 8 semaines",
-    tarifIndicatif: "À partir de 3 490 €, tarif indicatif, devis personnalisé",
+    tarifIndicatif: "À partir de 2 490 €, tarif indicatif, devis personnalisé",
     icon: ShoppingCart,
   },
   {
@@ -142,7 +142,8 @@ export const services: Service[] = [
       "Automatisations IA (réponses, relances, reporting)",
     ],
     delaiIndicatif: "Sans engagement de durée",
-    tarifIndicatif: "À partir de 89 €/mois, tarif indicatif, devis personnalisé",
+    tarifIndicatif: "À partir de 39 €/mois",
+    tarifNote: "Selon la taille et les besoins du site.",
     icon: LineChart,
   },
   {

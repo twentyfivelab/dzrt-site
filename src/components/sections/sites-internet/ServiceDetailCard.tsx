@@ -43,6 +43,11 @@ export function ServiceDetailCard({ service }: { service: Service }) {
                 <div>
                   <dt className="font-medium whitespace-nowrap">Tarif indicatif</dt>
                   <dd className="text-ink-500 dark:text-ink-300">{service.tarifIndicatif}</dd>
+                  {service.tarifNote && (
+                    <dd className="mt-0.5 text-xs text-ink-400 dark:text-ink-400/80">
+                      {service.tarifNote}
+                    </dd>
+                  )}
                 </div>
               </div>
             </dl>

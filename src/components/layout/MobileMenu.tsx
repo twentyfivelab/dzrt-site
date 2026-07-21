@@ -8,7 +8,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/data/nav";
 import { Button } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/icons/WhatsAppIcon";
 import { useMounted } from "@/lib/hooks/useMounted";
+import { WHATSAPP_LINK } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function MobileMenu() {
@@ -83,6 +85,15 @@ export function MobileMenu() {
                 </Link>
               );
             })}
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 rounded-2xl px-4 py-4 font-display text-xl font-medium text-ink-900 transition-colors hover:bg-ink-900/5 dark:text-ink-50 dark:hover:bg-white/8"
+            >
+              <WhatsAppIcon className="h-5 w-5 shrink-0" />
+              WhatsApp
+            </a>
             <Button href="/devis" size="lg" className="mt-4 w-full">
               Demander un devis
             </Button>

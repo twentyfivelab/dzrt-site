@@ -11,9 +11,9 @@ import { buildMetadata } from "@/lib/metadata";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sites Internet",
+  title: "Nos offres",
   description:
-    "Site One Page, Vitrine, Premium, E-commerce, refonte, maintenance et branding : toutes nos prestations de création de site internet, avec délais et tarifs indicatifs.",
+    "Site One Page, Vitrine, Premium, E-commerce, refonte, maintenance et branding : toutes nos offres pour construire et faire grandir votre présence en ligne, avec délais et tarifs indicatifs.",
   path: "/sites-internet",
 });
 
@@ -39,11 +39,11 @@ export default function SitesInternetPage() {
       {servicesJsonLd.map((entry) => (
         <JsonLd key={entry.name} data={entry} />
       ))}
-      <Breadcrumbs items={[{ label: "Sites Internet", href: "/sites-internet" }]} />
+      <Breadcrumbs items={[{ label: "Nos offres", href: "/sites-internet" }]} />
       <PageHero
-        eyebrow="Sites internet"
-        title="Un site adapté à chaque étape de votre croissance"
-        description="Que vous démarriez votre activité ou vouliez faire évoluer votre présence en ligne, chaque prestation répond à un objectif précis, du premier site à la refonte."
+        eyebrow="Nos offres"
+        title="La bonne solution pour chaque étape de votre croissance"
+        description="Un premier site, une refonte complète, une boutique en ligne ou un accompagnement mensuel : chaque offre a un objectif clair et un résultat concret pour votre activité."
       />
       <section className="pb-24 sm:pb-32">
         <Container className="space-y-8">

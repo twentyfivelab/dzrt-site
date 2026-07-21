@@ -14,6 +14,7 @@ export interface Service {
   avantages: string[];
   delaiIndicatif: string;
   tarifIndicatif: string;
+  tarifNote?: string;
   inclusions?: string[];
   icon: LucideIcon;
 }
