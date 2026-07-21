@@ -1,4 +1,4 @@
-export const SITE_URL = "https://dzrt.com";
+export const SITE_URL = "https://dzrt.fr";
 export const SITE_NAME = "DZRT.";
 export const SITE_TAGLINE = "Studio digital — sites internet, branding & croissance en ligne";
 export const SITE_DESCRIPTION =
@@ -27,3 +27,6 @@ export const HOST_NAME = "[À COMPLÉTER — hébergeur, ex. Vercel Inc.]";
 export const HOST_ADDRESS = "[À COMPLÉTER — adresse de l'hébergeur]";
 
 export const DEVIS_RESPONSE_DELAY = "24 à 48h ouvrées";
+
+// Google Analytics 4 — surchargeable via NEXT_PUBLIC_GA_MEASUREMENT_ID si besoin (staging, etc.).
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-RNJEFXGPWE";

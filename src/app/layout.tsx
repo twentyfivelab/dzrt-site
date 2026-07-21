@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { fontDisplay, fontSans } from "@/lib/fonts";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { GoogleAnalyticsPageView } from "@/components/analytics/GoogleAnalyticsPageView";
 import { themeInitScript } from "@/lib/theme-script";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "@/lib/constants";
+import { GA_MEASUREMENT_ID, SITE_DESCRIPTION, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "@/lib/constants";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -98,6 +101,14 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Suspense fallback={null}>
+              <GoogleAnalyticsPageView />
+            </Suspense>
+            <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+          </>
+        )}
       </body>
     </html>
   );
