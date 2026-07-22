@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { PageHero } from "@/components/sections/shared/PageHero";
 import { Breadcrumbs } from "@/components/sections/shared/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
@@ -8,7 +8,6 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { WhatsAppIcon } from "@/components/ui/icons/WhatsAppIcon";
 import {
   CONTACT_EMAIL,
-  CONTACT_PHONE_DISPLAY,
   SOCIAL_LINKS,
   WHATSAPP_LINK,
   WHATSAPP_NUMBER_DISPLAY,
@@ -18,7 +17,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description:
-    "Une question, un projet en tête ? Contactez l'équipe DZRT. par e-mail, téléphone ou via le formulaire de contact.",
+    "Une question, un projet en tête ? Contactez l'équipe DZRT. par e-mail, WhatsApp ou via le formulaire de contact.",
   path: "/contact",
 });
 
@@ -61,12 +60,6 @@ export default function ContactPage() {
                     </span>
                     {CONTACT_EMAIL}
                   </a>
-                </li>
-                <li className="flex items-center gap-3 text-ink-700 dark:text-ink-100">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[image:var(--grad-hero)]">
-                    <Phone className="h-4 w-4 text-ink-900" aria-hidden="true" />
-                  </span>
-                  {CONTACT_PHONE_DISPLAY}
                 </li>
                 <li>
                   <a

@@ -5,7 +5,13 @@ import { Breadcrumbs } from "@/components/sections/shared/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { DevisForm } from "@/components/forms/DevisForm";
-import { CONTACT_EMAIL, DEVIS_RESPONSE_DELAY } from "@/lib/constants";
+import { WhatsAppIcon } from "@/components/ui/icons/WhatsAppIcon";
+import {
+  CONTACT_EMAIL,
+  DEVIS_RESPONSE_DELAY,
+  WHATSAPP_LINK,
+  WHATSAPP_NUMBER_DISPLAY,
+} from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -73,13 +79,24 @@ export default function DevisPage() {
                 <p className="text-sm text-ink-500 dark:text-ink-300">
                   Vous préférez nous écrire directement ?
                 </p>
-                <a
-                  href={`mailto:${CONTACT_EMAIL}`}
-                  className="mt-2 inline-flex items-center gap-2 font-medium text-ink-900 hover:text-lilac-600 dark:text-ink-50 dark:hover:text-lilac-300"
-                >
-                  <Mail className="h-4 w-4" aria-hidden="true" />
-                  {CONTACT_EMAIL}
-                </a>
+                <div className="mt-3 space-y-2">
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="flex items-center gap-2 font-medium text-ink-900 hover:text-lilac-600 dark:text-ink-50 dark:hover:text-lilac-300"
+                  >
+                    <Mail className="h-4 w-4" aria-hidden="true" />
+                    {CONTACT_EMAIL}
+                  </a>
+                  <a
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-medium text-ink-900 hover:text-lilac-600 dark:text-ink-50 dark:hover:text-lilac-300"
+                  >
+                    <WhatsAppIcon className="h-4 w-4" />
+                    {WHATSAPP_NUMBER_DISPLAY}
+                  </a>
+                </div>
               </div>
             </div>
           </Reveal>

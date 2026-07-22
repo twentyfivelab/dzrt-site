@@ -15,7 +15,7 @@ export function WhatsAppButton({ className }: { className?: string }) {
         className,
       )}
     >
-      <WhatsAppIcon className="h-6 w-6 transition-transform duration-300 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(247,126,156,0.5)]" />
+      <WhatsAppIcon className="h-[1.7rem] w-[1.7rem] transition-transform duration-300 ease-out group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(247,126,156,0.5)]" />
     </a>
   );
 }

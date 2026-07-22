@@ -39,8 +39,8 @@ export function Hero() {
                 </Button>
               </MagneticButton>
               <MagneticButton>
-                <Button href="/realisations" size="lg" variant="secondary">
-                  Découvrir nos réalisations
+                <Button href="/sites-internet" size="lg" variant="secondary">
+                  Découvrir nos offres
                 </Button>
               </MagneticButton>
             </div>
