@@ -39,9 +39,9 @@ export function SocialProofTeaser() {
                     ))}
                   </div>
                 </div>
-                <p className="mt-4 font-display text-xl font-semibold text-ink-900 dark:text-ink-50">
+                <h3 className="mt-4 font-display text-xl font-semibold text-ink-900 dark:text-ink-50">
                   {project.nom}
-                </p>
+                </h3>
                 <p className="mt-1 font-display text-2xl font-semibold text-gradient">
                   {project.resultats[0]?.value}
                 </p>

@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { MiniTrendChart } from "@/components/ui/illustrations/MiniTrendChart";
@@ -26,9 +26,9 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
       <div
         className={`flex aspect-[16/10] items-center justify-center bg-gradient-to-br p-8 ${accentGradients[project.accent]}`}
       >
-        <p className="text-center font-display text-2xl font-semibold text-ink-900 sm:text-3xl">
+        <h2 className="text-center font-display text-2xl font-semibold text-ink-900 sm:text-3xl">
           {project.nom}
-        </p>
+        </h2>
       </div>
       <div className="flex flex-1 flex-col p-8">
         <div className="flex items-center justify-between gap-3">
@@ -36,26 +36,44 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
           <span className="text-sm text-ink-500 dark:text-ink-300">{project.year}</span>
         </div>
 
-        <div className="mt-4">
-          <p className="text-xs font-semibold tracking-wide text-lilac-600 uppercase dark:text-lilac-300">
-            Notre solution
-          </p>
-          <p className="mt-1.5 text-base leading-relaxed text-ink-700 dark:text-ink-100">
-            {project.solution}
-          </p>
+        <div className="mt-5">
+          <h3 className="font-display text-sm font-semibold tracking-wide text-ink-900 uppercase dark:text-ink-50">
+            Le défi
+          </h3>
+          <ul className="mt-3 space-y-2">
+            {project.probleme.map((item) => (
+              <li
+                key={item}
+                className="flex gap-2 text-sm leading-relaxed text-ink-500 dark:text-ink-300"
+              >
+                <Check
+                  className="mt-0.5 h-4 w-4 shrink-0 text-rose-400 dark:text-rose-400"
+                  aria-hidden="true"
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <p className="mt-4 text-base leading-relaxed text-ink-500 dark:text-ink-300">
-          {project.description}
-        </p>
-
-        <div className="mt-5 rounded-2xl bg-ink-900/[0.03] p-4 dark:bg-white/4">
-          <p className="text-xs font-semibold tracking-wide text-ink-500 uppercase dark:text-ink-300">
-            Le défi
-          </p>
-          <p className="mt-1.5 text-sm leading-relaxed text-ink-700 dark:text-ink-100">
-            {project.probleme}
-          </p>
+        <div className="mt-6">
+          <h3 className="font-display text-sm font-semibold tracking-wide text-ink-900 uppercase dark:text-ink-50">
+            Notre solution
+          </h3>
+          <ul className="mt-3 space-y-2">
+            {project.solution.map((item) => (
+              <li
+                key={item}
+                className="flex gap-2 text-sm leading-relaxed text-ink-700 dark:text-ink-100"
+              >
+                <Check
+                  className="mt-0.5 h-4 w-4 shrink-0 text-lilac-500 dark:text-lilac-300"
+                  aria-hidden="true"
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="mt-5 flex flex-wrap gap-2">

@@ -40,9 +40,8 @@ export interface PortfolioProject {
   slug: string;
   nom: string;
   secteur: string;
-  description: string;
-  probleme: string;
-  solution: string;
+  probleme: string[];
+  solution: string[];
   technologies: string[];
   resultats: PortfolioResult[];
   trend: PortfolioTrend;

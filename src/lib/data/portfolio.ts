@@ -5,12 +5,17 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "atelier-lumiere",
     nom: "Atelier Lumière",
     secteur: "Architecture d'intérieur",
-    description:
-      "Un site vitrine pour un studio d'architecture d'intérieur, pensé comme une vraie galerie pour mettre chaque réalisation en valeur.",
-    probleme:
-      "Le studio envoyait son book par e-mail, n'apparaissait pas sur Google et son site ne reflétait pas la qualité de son travail.",
-    solution:
-      "Un site vitrine haut de gamme avec un portfolio immersif, pensé pour mettre en valeur les réalisations du studio, renforcer sa crédibilité et générer davantage de demandes de devis, avec un référencement optimisé.",
+    probleme: [
+      "Book envoyé par e-mail, sans vitrine en ligne",
+      "Absence totale sur Google",
+      "Site ne reflétant pas la qualité du travail",
+    ],
+    solution: [
+      "Site vitrine haut de gamme avec portfolio immersif",
+      "Identité renforcée pour gagner en crédibilité",
+      "Référencement local optimisé",
+      "Génération accrue de demandes de devis",
+    ],
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "SEO local"],
     resultats: [
       { label: "Trafic organique", value: "+140 % en 4 mois" },
@@ -32,12 +37,16 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "chez-marcelline",
     nom: "Chez Marcelline",
     secteur: "Restauration",
-    description:
-      "Un site one page pour donner envie de réserver en quelques secondes : menu, ambiance et réservation en un seul geste.",
-    probleme:
-      "Pas de site internet, une fiche Google Business Profile incomplète et une dépendance totale aux plateformes de réservation.",
-    solution:
-      "Un site one page avec le menu mis en avant, la réservation intégrée et une fiche Google Business Profile entièrement optimisée.",
+    probleme: [
+      "Aucun site internet",
+      "Fiche Google Business Profile incomplète",
+      "Dépendance totale aux plateformes de réservation",
+    ],
+    solution: [
+      "Site one page avec menu mis en avant",
+      "Réservation en ligne intégrée",
+      "Fiche Google Business Profile optimisée",
+    ],
     technologies: ["Next.js", "Tailwind CSS", "Google Business Profile"],
     resultats: [
       { label: "Réservations en ligne", value: "+65 % en 3 mois" },
@@ -59,12 +68,17 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "cabinet-dr-armand",
     nom: "Cabinet Dr. Armand",
     secteur: "Cabinet médical",
-    description:
-      "Un site vitrine rassurant pour un cabinet médical pluridisciplinaire, avec une prise de rendez-vous simple et des informations claires.",
-    probleme:
-      "Le site était vieillissant, mal adapté au mobile, et les patients appelaient pour des informations déjà disponibles ailleurs.",
-    solution:
-      "Une refonte complète avec une page par praticien, une accessibilité renforcée et un module de prise de rendez-vous en ligne.",
+    probleme: [
+      "Site vieillissant, mal adapté au mobile",
+      "Standard téléphonique surchargé de questions simples",
+      "Manque de clarté dans les informations pratiques",
+    ],
+    solution: [
+      "Refonte complète du site",
+      "Une page dédiée par praticien",
+      "Accessibilité renforcée (RGAA)",
+      "Prise de rendez-vous en ligne",
+    ],
     technologies: ["Next.js", "Tailwind CSS", "Accessibilité RGAA"],
     resultats: [
       { label: "Rendez-vous en ligne", value: "+80 %" },
@@ -86,12 +100,16 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "menuiserie-lefort",
     nom: "Menuiserie Lefort",
     secteur: "Menuiserie",
-    description:
-      "Un site vitrine pour un artisan menuisier, avec une galerie de réalisations et un formulaire de devis qui qualifie chaque demande.",
-    probleme:
-      "Un savoir-faire reconnu localement, mais invisible sur Google face à des enseignes nationales mieux référencées.",
-    solution:
-      "Une galerie de chantiers, un contenu optimisé pour le référencement local et un formulaire de devis détaillé.",
+    probleme: [
+      "Savoir-faire reconnu localement mais invisible sur Google",
+      "Concurrence d'enseignes nationales mieux référencées",
+      "Peu de demandes de devis qualifiées",
+    ],
+    solution: [
+      "Galerie de chantiers mise en valeur",
+      "Contenu optimisé pour le référencement local",
+      "Formulaire de devis détaillé et qualifiant",
+    ],
     technologies: ["Next.js", "Tailwind CSS", "SEO local"],
     resultats: [
       { label: "Demandes de devis qualifiées", value: "+120 % en 6 mois" },
@@ -113,12 +131,16 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "coach-elise-moreau",
     nom: "Élise Moreau Coaching",
     secteur: "Coaching professionnel",
-    description:
-      "Un site one page évolutif pour affirmer un positionnement clair et automatiser la prise de rendez-vous.",
-    probleme:
-      "Une activité qui reposait sur le bouche-à-oreille et les réseaux sociaux, sans espace pour convertir les visiteurs en clients.",
-    solution:
-      "Un positionnement affirmé, une présentation claire des offres et une prise de rendez-vous automatisée par IA.",
+    probleme: [
+      "Activité reposant sur le bouche-à-oreille et les réseaux sociaux",
+      "Aucun espace pour convertir les visiteurs en clients",
+      "Prise de rendez-vous chronophage",
+    ],
+    solution: [
+      "Positionnement de marque affirmé",
+      "Présentation claire des offres",
+      "Prise de rendez-vous automatisée par IA",
+    ],
     technologies: ["Next.js", "Tailwind CSS", "Automatisation IA"],
     resultats: [
       { label: "Rendez-vous automatisés", value: "+90 %" },
@@ -140,12 +162,16 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "boutique-mira",
     nom: "Boutique Mira",
     secteur: "Mode & accessoires",
-    description:
-      "Une boutique e-commerce complète, du catalogue jusqu'au paiement, avec une identité de marque pastel entièrement sur mesure.",
-    probleme:
-      "Une marque vendue uniquement sur les réseaux sociaux et des marketplaces, sans maîtrise de son image ni de sa marge.",
-    solution:
-      "Une boutique en ligne sur mesure, un branding complet et un tunnel d'achat optimisé pour réduire les abandons de panier.",
+    probleme: [
+      "Vente uniquement via réseaux sociaux et marketplaces",
+      "Aucune maîtrise de l'image de marque",
+      "Marge réduite par les commissions des plateformes",
+    ],
+    solution: [
+      "Boutique e-commerce sur mesure",
+      "Branding complet et cohérent",
+      "Tunnel d'achat optimisé pour réduire les abandons de panier",
+    ],
     technologies: ["Next.js", "Tailwind CSS", "E-commerce", "Branding"],
     resultats: [
       { label: "Chiffre d'affaires en ligne", value: "+75 % en 6 mois" },

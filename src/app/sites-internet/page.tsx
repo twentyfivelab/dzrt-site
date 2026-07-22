@@ -25,7 +25,10 @@ const servicesJsonLd = services.map((service) => ({
   serviceType: service.title,
   name: service.title,
   description: service.shortDescription,
-  areaServed: "FR",
+  areaServed: [
+    { "@type": "Country", name: "France" },
+    { "@type": "Country", name: "Suisse" },
+  ],
   provider: {
     "@type": "Organization",
     name: SITE_NAME,

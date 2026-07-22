@@ -86,6 +86,10 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: new URL("/apple-icon", SITE_URL).toString(),
   description: SITE_DESCRIPTION,
+  areaServed: [
+    { "@type": "Country", name: "France" },
+    { "@type": "Country", name: "Suisse" },
+  ],
   ...(socialUrls.length > 0 ? { sameAs: socialUrls } : {}),
 };
 
