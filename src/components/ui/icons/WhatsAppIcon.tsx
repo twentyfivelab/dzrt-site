@@ -2,12 +2,17 @@
 
 import { useId } from "react";
 
+/**
+ * Official WhatsApp glyph (Meta brand mark), untouched geometry — only the
+ * fill is customized to DZRT's gradient. Path data matches the canonical
+ * 24x24 monochrome mark, not a redrawn interpretation.
+ */
 export function WhatsAppIcon({ className }: { className?: string }) {
   const uid = useId();
   const gradientId = `${uid}-whatsapp-gradient`;
 
   return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
       <defs>
         <linearGradient id={gradientId} x1="0%" y1="0%" x2="85%" y2="100%">
           <stop offset="0%" style={{ stopColor: "var(--color-rose-400)" }} />
@@ -16,18 +21,8 @@ export function WhatsAppIcon({ className }: { className?: string }) {
         </linearGradient>
       </defs>
       <path
-        d="M12 2.5C6.7 2.5 2.5 6.7 2.5 12c0 1.83.51 3.54 1.4 5l-1.44 4.5 4.65-1.4c1.4.79 3.02 1.24 4.74 1.24 5.3 0 9.5-4.2 9.5-9.5S17.3 2.5 12 2.5Z"
-        stroke={`url(#${gradientId})`}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M8.3 8.7c.4-.9 1.1-1.4 1.9-1.4.2 0 .4.1.5.3l1.1 2.4c.1.3.1.6-.1.8l-.7.9c-.1.2-.1.4 0 .6.8 1.5 2.1 2.8 3.6 3.6.2.1.4.1.6 0l.9-.7c.2-.2.5-.2.8-.1l2.4 1.1c.2.1.3.3.3.5 0 .8-.5 1.5-1.4 1.9-.5.2-1 .3-1.6.3-3.9 0-8.5-4.6-8.5-8.5 0-.6.1-1.1.3-1.6Z"
-        stroke={`url(#${gradientId})`}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fill={`url(#${gradientId})`}
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.357.101 11.94c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 0 0 5.71 1.447h.005c6.582 0 11.941-5.358 11.944-11.943a11.86 11.86 0 0 0-3.484-8.443"
       />
     </svg>
   );
