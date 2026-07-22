@@ -6,10 +6,10 @@ import { SocialProofTeaser } from "@/components/sections/home/SocialProofTeaser"
 import { FaqTeaser } from "@/components/sections/home/FaqTeaser";
 import { FinalCta } from "@/components/sections/home/FinalCta";
 import { buildMetadata } from "@/lib/metadata";
-import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/constants";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/constants";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${SITE_NAME} · Studio digital : sites internet et branding`,
+  title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   path: "/",
 });

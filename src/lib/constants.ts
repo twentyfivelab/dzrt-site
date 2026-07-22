@@ -1,8 +1,9 @@
 export const SITE_URL = "https://dzrt.fr";
 export const SITE_NAME = "DZRT.";
+export const SITE_TITLE = "DZRT. Studio digital : Sites internet, branding & stratégie digitale";
 export const SITE_TAGLINE = "Studio digital dédié aux sites internet, au branding et à la croissance en ligne.";
 export const SITE_DESCRIPTION =
-  "DZRT. crée des sites internet et des identités de marque qui inspirent confiance, pour les entreprises et indépendants qui veulent se différencier en ligne.";
+  "DZRT. conçoit des sites internet et des identités de marque sur mesure, portés par une stratégie digitale claire pour faire grandir votre activité en ligne.";
 
 export const CONTACT_EMAIL = "hello@dzrt.fr";
 export const CONTACT_PHONE = "[À COMPLÉTER : numéro de téléphone]";
