@@ -5,7 +5,7 @@ import { navLinks, legalLinks } from "@/lib/data/nav";
 import { CONTACT_EMAIL, SITE_TAGLINE, SOCIAL_LINKS } from "@/lib/constants";
 
 const socialItems = [
-  { href: SOCIAL_LINKS.instagram, label: "Instagram", monogram: "IG" },
+  { href: SOCIAL_LINKS.instagram, label: "Instagram (IG)", monogram: "IG" },
   { href: SOCIAL_LINKS.linkedin, label: "LinkedIn", monogram: "in" },
   { href: SOCIAL_LINKS.twitterX, label: "X (Twitter)", monogram: "X" },
 ];
@@ -85,10 +85,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-ink-900/5 pt-8 text-sm text-ink-400 dark:border-white/8 dark:text-ink-400">
+        <div className="mt-12 border-t border-ink-900/5 pt-8 text-sm text-ink-500 dark:border-white/8 dark:text-ink-400">
           © {new Date().getFullYear()} DZRT. Tous droits réservés.
-          <span className="mt-1 block text-xs text-ink-400/80 dark:text-ink-400/70">
-            Nous accompagnons les entreprises en France et en Suisse.
+          <span className="mt-1 block text-xs text-ink-500 dark:text-ink-400">
+            Basée en Haute-Savoie, nous accompagnons les entreprises partout en France et en Suisse.
           </span>
         </div>
       </Container>

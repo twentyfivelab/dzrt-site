@@ -81,11 +81,17 @@ const socialUrls = Object.values(SOCIAL_LINKS).filter(
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "ProfessionalService",
   name: SITE_NAME,
   url: SITE_URL,
   logo: new URL("/apple-icon", SITE_URL).toString(),
+  image: new URL("/apple-icon", SITE_URL).toString(),
   description: SITE_DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "Haute-Savoie",
+    addressCountry: "FR",
+  },
   areaServed: [
     { "@type": "Country", name: "France" },
     { "@type": "Country", name: "Suisse" },

@@ -4,18 +4,20 @@ import { Breadcrumbs } from "@/components/sections/shared/Breadcrumbs";
 import { PortfolioGrid } from "@/components/sections/realisations/PortfolioGrid";
 import { CtaBanner } from "@/components/sections/shared/CtaBanner";
 import { Container } from "@/components/ui/Container";
-import { buildMetadata } from "@/lib/metadata";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildMetadata, buildWebPageJsonLd } from "@/lib/metadata";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Réalisations",
-  description:
-    "Sites vitrines, e-commerce et one page : découvrez nos projets, leurs résultats chiffrés en visibilité, conversion et chiffre d'affaires, et les témoignages de nos clients.",
-  path: "/realisations",
-});
+const title = "Réalisations";
+const description =
+  "Sites vitrines, e-commerce et one page : découvrez nos projets, leurs résultats chiffrés en visibilité, conversion et chiffre d'affaires, et les témoignages de nos clients.";
+const path = "/realisations";
+
+export const metadata: Metadata = buildMetadata({ title, description, path });
 
 export default function RealisationsPage() {
   return (
     <>
+      <JsonLd data={buildWebPageJsonLd({ title, description, path })} />
       <Breadcrumbs items={[{ label: "Réalisations", href: "/realisations" }]} />
       <PageHero
         eyebrow="Réalisations"

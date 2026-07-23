@@ -6,23 +6,24 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { WhatsAppIcon } from "@/components/ui/icons/WhatsAppIcon";
+import { JsonLd } from "@/components/seo/JsonLd";
 import {
   CONTACT_EMAIL,
   SOCIAL_LINKS,
   WHATSAPP_LINK,
   WHATSAPP_NUMBER_DISPLAY,
 } from "@/lib/constants";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, buildWebPageJsonLd } from "@/lib/metadata";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Contact",
-  description:
-    "Une question, un projet en tête ? Contactez l'équipe DZRT. par e-mail, WhatsApp ou via le formulaire de contact.",
-  path: "/contact",
-});
+const title = "Contact";
+const description =
+  "Une question, un projet en tête ? Contactez l'équipe DZRT. par e-mail, WhatsApp ou via le formulaire de contact.";
+const path = "/contact";
+
+export const metadata: Metadata = buildMetadata({ title, description, path });
 
 const socialItems = [
-  { href: SOCIAL_LINKS.instagram, label: "Instagram", monogram: "IG" },
+  { href: SOCIAL_LINKS.instagram, label: "Instagram (IG)", monogram: "IG" },
   { href: SOCIAL_LINKS.linkedin, label: "LinkedIn", monogram: "in" },
   { href: SOCIAL_LINKS.twitterX, label: "X (Twitter)", monogram: "X" },
 ];
@@ -30,6 +31,7 @@ const socialItems = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={buildWebPageJsonLd({ title, description, path })} />
       <Breadcrumbs items={[{ label: "Contact", href: "/contact" }]} />
       <PageHero
         eyebrow="Contact"
@@ -49,6 +51,9 @@ export default function ContactPage() {
               <h2 className="font-display text-xl font-semibold text-ink-900 dark:text-ink-50">
                 Coordonnées
               </h2>
+              <p className="mt-2 text-sm text-ink-500 dark:text-ink-300">
+                Basée en Haute-Savoie, nous accompagnons des clients dans toute la France et en Suisse.
+              </p>
               <ul className="mt-6 space-y-4">
                 <li>
                   <a

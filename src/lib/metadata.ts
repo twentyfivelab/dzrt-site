@@ -41,3 +41,29 @@ export function buildMetadata({
       : { index: true, follow: true },
   };
 }
+
+export function buildWebPageJsonLd({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}) {
+  const url = new URL(path, SITE_URL).toString();
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title.includes(SITE_NAME) ? title : `${title} · ${SITE_NAME}`,
+    description,
+    url,
+    inLanguage: "fr-FR",
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  };
+}

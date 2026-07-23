@@ -13,7 +13,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/constants";
 export const metadata: Metadata = buildMetadata({
   title: "Nos offres",
   description:
-    "Site One Page, Vitrine, Premium, E-commerce, refonte, maintenance et branding : toutes nos offres pour construire et faire grandir votre présence en ligne, avec délais et tarifs indicatifs.",
+    "Création de site internet, identité visuelle et logo sur mesure, pour les entreprises en France et en Suisse : toutes nos offres, avec délais et tarifs indicatifs.",
   path: "/sites-internet",
 });
 
@@ -30,7 +30,7 @@ const servicesJsonLd = services.map((service) => ({
     { "@type": "Country", name: "Suisse" },
   ],
   provider: {
-    "@type": "Organization",
+    "@type": "ProfessionalService",
     name: SITE_NAME,
     url: SITE_URL,
   },
@@ -46,7 +46,7 @@ export default function SitesInternetPage() {
       <PageHero
         eyebrow="Nos offres"
         title="La bonne solution pour chaque étape de votre croissance"
-        description="Un premier site, une refonte complète, une boutique en ligne ou un accompagnement mensuel : chaque offre a un objectif clair et un résultat concret pour votre activité."
+        description="Un premier site, une refonte complète, une boutique en ligne ou un accompagnement mensuel : chaque offre a un objectif clair et un résultat concret pour votre activité. Nous pouvons également concevoir le logo de votre entreprise, pour poser les fondations d'une identité de marque forte, cohérente et mémorable."
       />
       <section className="pb-24 sm:pb-32">
         <Container className="space-y-8">

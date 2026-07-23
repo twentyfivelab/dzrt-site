@@ -6,19 +6,24 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { DevisForm } from "@/components/forms/DevisForm";
 import { WhatsAppIcon } from "@/components/ui/icons/WhatsAppIcon";
+import { JsonLd } from "@/components/seo/JsonLd";
 import {
   CONTACT_EMAIL,
   DEVIS_RESPONSE_DELAY,
   WHATSAPP_LINK,
   WHATSAPP_NUMBER_DISPLAY,
 } from "@/lib/constants";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, buildWebPageJsonLd } from "@/lib/metadata";
+
+const pageTitle = "Demander un devis";
+const pageDescription =
+  "Décrivez votre projet en quelques minutes : nous vous répondons sous 24 à 48h avec des recommandations concrètes et un devis personnalisé.";
+const pagePath = "/devis";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Demander un devis",
-  description:
-    "Décrivez votre projet en quelques minutes : nous vous répondons sous 24 à 48h avec des recommandations concrètes et un devis personnalisé.",
-  path: "/devis",
+  title: pageTitle,
+  description: pageDescription,
+  path: pagePath,
 });
 
 const steps = [
@@ -42,6 +47,9 @@ const steps = [
 export default function DevisPage() {
   return (
     <>
+      <JsonLd
+        data={buildWebPageJsonLd({ title: pageTitle, description: pageDescription, path: pagePath })}
+      />
       <Breadcrumbs items={[{ label: "Devis", href: "/devis" }]} />
       <PageHero
         eyebrow="Devis gratuit"
